@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Currency Converter
+        link(rel="stylesheet" href="http://localhost:4131/main.css")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        script(defer src="http://localhost:4131/main.js" type="text/javascript")
+    body
+        div.conatiner
+            h2.heading Currency Converter
+            div.rate
+                div.rate1
+                div.rate2
+            div.main
+                div.initial
+                    div.options
+                        select
+                            each symbol in symbols
+                                option(value= symbol)= symbol
+                    div.input
+                        input(type="number")
+                span.material-icons.swap(style="font-size: 36px;") swap_horiz
+                div.target
+                    div.options
+                        select
+                            each symbol in symbols
+                                option(value= symbol)= symbol
+                    div.input
+                        input(type="number" disabled)
+            button.result Result
